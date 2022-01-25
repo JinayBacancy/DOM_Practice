@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="h1">This is H1 tag.</h1>
+    </div><br>
+    <div>
+        <h2 id="h2" class="ch2">This is cH2 tag.</h2>
+        <h2 id="h3" class="ch2">This is cH2 tag.</h2>
+    </div>
+    <div>
+        <p class="ch2" id="p4">This is getElemetsByTagName.</p>
+    </div>
+
+    <script>
+        document.getElementById('h1').innerHTML = "It is use of h1 tag";
+        var cls = document.getElementsByClassName("ch2");
+        cls[0].style.color = "cyan";
+        document.getElementsByTagName("p")[0].style.background = "blue";
+        var qa = document.querySelectorAll(".ch2");
+        for (let i = 0; i < qa.length; i++) {
+            qa[i].style.fontFamily = "Impact,Charcoal,sans-serif";
+        }
+        document.querySelector(".ch2").style.background = "gray";
+    </script>
+</body>
+
+</html>
