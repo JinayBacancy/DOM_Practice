@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .data {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 500px;
+            width: 80%;
+            background-color: chartreuse;
+            margin-left: 10%;
+            margin-top: 60px;
+            padding: 20px;
+            display: inline-block;
+        }
+        
+        .table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            height: 40px;
+            text-align: center;
+        }
+        
+        input {
+            height: 40px;
+            text-indent: 20px;
+        }
+        
+        button {
+            padding: 10px;
+        }
+        
+        .form {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="data">
+        <h1>Students Registration</h1>
+        <div class="form">
+            <form onsubmit="addstudents(event)">
+                <input type="text" placeholder="enter name" id="name" required>
+                <input type="number" placeholder="enter Age" id="age" required>
+                <input type="email" placeholder="enter Email-ID" id="email" required>
+                <input type="text" placeholder="enter City" id="city" required>
+                <select style="width: 150px;height: 44px;" id="degree" required>
+                    <option value="BTech">BTech</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MscIT">MscIT</option>
+                    <option value="BE">BE</option>
+                </select>
+                <input type="radio" id="r1" name="cat" value="male" style="height: 15px;width: 33px;"><label style="color: black;font-size: large;">MALE</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="r2" name="cat" value="female" style="height: 15px;width: 33px;"><label style="color: black;font-size: large;">FEMALE</label>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <table border="4" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Sr. no</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Course</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tdata" id="tdata">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="form3.js">
+    </script>
+</body>
+
+</html>
